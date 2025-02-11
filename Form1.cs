@@ -7,22 +7,17 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
             InitializeComponent();
         }
 
-        private void sendToolStripMenuItem_Click(object sender, EventArgs e)
+        private void fileViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void communicationToolStripMenuItem_Click(object sender, EventArgs e)
+        private void finishedToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void sendToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sendToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        private void saveToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
 
         }
