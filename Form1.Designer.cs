@@ -33,10 +33,8 @@
             newToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
-            fileViewToolStripMenuItem = new ToolStripMenuItem();
-            treeViewToolStripMenuItem = new ToolStripMenuItem();
+            fileTreeViewToolStripMenuItem = new ToolStripMenuItem();
             finishedToolStripMenuItem = new ToolStripMenuItem();
-            finishToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -79,40 +77,24 @@
             saveToolStripMenuItem.Text = "Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
-            // fileViewToolStripMenuItem
+            // fileTreeViewToolStripMenuItem
             // 
-            fileViewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { treeViewToolStripMenuItem });
-            fileViewToolStripMenuItem.Name = "fileViewToolStripMenuItem";
-            fileViewToolStripMenuItem.Size = new Size(80, 24);
-            fileViewToolStripMenuItem.Text = "File view";
-            fileViewToolStripMenuItem.Click += fileViewToolStripMenuItem_Click;
-            // 
-            // treeViewToolStripMenuItem
-            // 
-            treeViewToolStripMenuItem.Name = "treeViewToolStripMenuItem";
-            treeViewToolStripMenuItem.Size = new Size(152, 26);
-            treeViewToolStripMenuItem.Text = "TreeView";
-            treeViewToolStripMenuItem.Click += treeViewToolStripMenuItem_Click;
+            fileTreeViewToolStripMenuItem.Name = "fileTreeViewToolStripMenuItem";
+            fileTreeViewToolStripMenuItem.Size = new Size(110, 24);
+            fileTreeViewToolStripMenuItem.Text = "File TreeView";
+            fileTreeViewToolStripMenuItem.Click += fileViewToolStripMenuItem_Click;
             // 
             // finishedToolStripMenuItem
             // 
-            finishedToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { finishToolStripMenuItem });
             finishedToolStripMenuItem.Name = "finishedToolStripMenuItem";
             finishedToolStripMenuItem.Size = new Size(77, 24);
             finishedToolStripMenuItem.Text = "Finished";
             finishedToolStripMenuItem.Click += finishedToolStripMenuItem_Click;
             // 
-            // finishToolStripMenuItem
-            // 
-            finishToolStripMenuItem.Name = "finishToolStripMenuItem";
-            finishToolStripMenuItem.Size = new Size(129, 26);
-            finishToolStripMenuItem.Text = "Finish";
-            finishToolStripMenuItem.Click += finishToolStripMenuItem_Click;
-            // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem1, fileViewToolStripMenuItem, finishedToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem1, fileTreeViewToolStripMenuItem, finishedToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1079, 28);
@@ -141,10 +123,8 @@
         private ToolStripMenuItem newToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripMenuItem saveToolStripMenuItem;
-        private ToolStripMenuItem fileViewToolStripMenuItem;
-        private ToolStripMenuItem treeViewToolStripMenuItem;
+        private ToolStripMenuItem fileTreeViewToolStripMenuItem;
         private ToolStripMenuItem finishedToolStripMenuItem;
-        private ToolStripMenuItem finishToolStripMenuItem;
         private MenuStrip menuStrip1;
     }
 }

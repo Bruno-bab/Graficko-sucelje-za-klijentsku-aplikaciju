@@ -91,12 +91,8 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
 
         private void fileViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void treeViewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            Form2 frm = new Form2();
+            frm.ShowDialog();
         }
 
         private void finishedToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,10 +100,6 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
 
         }
 
-        private void finishToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
     }
 }
