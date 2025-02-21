@@ -1,3 +1,4 @@
+using System.Drawing.Text;
 using System.IO;
 
 namespace Grafičko_sučelje_za_klijentsku_aplikaciju
@@ -7,19 +8,40 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
         private OpenFileDialog openFileDialog;
         private SaveFileDialog saveFileDialog;
 
+        private ToolStripMenuItem toolStripMenuItem1 = new ToolStripMenuItem();
+        private ToolStripRadioButtonMenuItem toolStripRadioButtonMenuItem1 = new ToolStripRadioButtonMenuItem();
+        private ToolStripRadioButtonMenuItem toolStripRadioButtonMenuItem2 = new ToolStripRadioButtonMenuItem();
+
         public Form1()
         {
             InitializeComponent();
+           
+            toolStripRadioButtonMenuItem1.Text = "Not Finished";
+            toolStripRadioButtonMenuItem2.Text = "Finished";
+
+            toolStripRadioButtonMenuItem1.Checked = true;
+            finishToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] {
+            toolStripRadioButtonMenuItem1, toolStripRadioButtonMenuItem2});
         }
 
         private void NewFile()
         {
             try
             {
-                this.richTextBox1.Text = string.Empty;
-                this.Text = "Untitled";
+                if (this.richTextBox1.Text != string.Empty)
+                {
+                    DialogResult choice = MessageBox.Show("This file will be lost" +
+                        "if it is not saved, do you want to continue?", "Warning",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning,
+                        MessageBoxDefaultButton.Button2);
+                    if (choice == DialogResult.Yes)
+                    {
+                        this.richTextBox1.Text = string.Empty;
+                    }
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show(("Can't create a new file"));
             }
@@ -35,7 +57,7 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
                     this.richTextBox1.Text = File.ReadAllText(openFileDialog.FileName);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show(("Can't open the file"));
             }
@@ -62,10 +84,15 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
                     MessageBox.Show(("File is empty"));
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show(("Can't save the file"));
             }
+        }
+
+        private void CheckBoxSelect()
+        {
+            
         }
 
         private void fileToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -95,11 +122,9 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
             frm.ShowDialog();
         }
 
-        private void finishedToolStripMenuItem_Click(object sender, EventArgs e)
+        private void finishToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-
-      
     }
 }

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grafičko sučelje za klijentsku aplikaciju", "Grafičko sučelje za klijentsku aplikaciju.csproj", "{CD1A3C85-F5AA-412E-AB9F-408B7CB0FA8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grafičko sučelje za klijentsku aplikaciju", "Grafičko sučelje za klijentsku aplikaciju.csproj", "{CD1A3C85-F5AA-412E-AB9F-408B7CB0FA8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "..\UnitTestProject\UnitTestProject.csproj", "{7BB8EF1E-AFBF-4039-AD8E-810E2047E592}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CD1A3C85-F5AA-412E-AB9F-408B7CB0FA8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD1A3C85-F5AA-412E-AB9F-408B7CB0FA8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD1A3C85-F5AA-412E-AB9F-408B7CB0FA8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB8EF1E-AFBF-4039-AD8E-810E2047E592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB8EF1E-AFBF-4039-AD8E-810E2047E592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB8EF1E-AFBF-4039-AD8E-810E2047E592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB8EF1E-AFBF-4039-AD8E-810E2047E592}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

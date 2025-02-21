@@ -17,7 +17,7 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
         {
             InitializeComponent();
             ListDirectory(treeView1, Directory.GetCurrentDirectory());
-
+            this.Text = "File TreeView";
         }
 
         private void ListDirectory(TreeView treeView, string path)

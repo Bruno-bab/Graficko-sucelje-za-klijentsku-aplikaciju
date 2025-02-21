@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             richTextBox1 = new RichTextBox();
-            fileToolStripMenuItem1 = new ToolStripMenuItem();
+            fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
             fileTreeViewToolStripMenuItem = new ToolStripMenuItem();
-            finishedToolStripMenuItem = new ToolStripMenuItem();
+            finishToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -48,13 +48,13 @@
             richTextBox1.TabIndex = 1;
             richTextBox1.Text = "";
             // 
-            // fileToolStripMenuItem1
+            // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem, saveToolStripMenuItem });
-            fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
-            fileToolStripMenuItem1.Size = new Size(46, 24);
-            fileToolStripMenuItem1.Text = "File";
-            fileToolStripMenuItem1.Click += fileToolStripMenuItem1_Click;
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem, saveToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(46, 24);
+            fileToolStripMenuItem.Text = "File";
+            fileToolStripMenuItem.Click += fileToolStripMenuItem1_Click;
             // 
             // newToolStripMenuItem
             // 
@@ -84,17 +84,16 @@
             fileTreeViewToolStripMenuItem.Text = "File TreeView";
             fileTreeViewToolStripMenuItem.Click += fileViewToolStripMenuItem_Click;
             // 
-            // finishedToolStripMenuItem
+            // finishToolStripMenuItem
             // 
-            finishedToolStripMenuItem.Name = "finishedToolStripMenuItem";
-            finishedToolStripMenuItem.Size = new Size(77, 24);
-            finishedToolStripMenuItem.Text = "Finished";
-            finishedToolStripMenuItem.Click += finishedToolStripMenuItem_Click;
+            finishToolStripMenuItem.Name = "finishToolStripMenuItem";
+            finishToolStripMenuItem.Size = new Size(60, 24);
+            finishToolStripMenuItem.Text = "Finish";
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem1, fileTreeViewToolStripMenuItem, finishedToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, fileTreeViewToolStripMenuItem, finishToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1079, 28);
@@ -119,12 +118,12 @@
 
         #endregion
         private RichTextBox richTextBox1;
-        private ToolStripMenuItem fileToolStripMenuItem1;
+        private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem newToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripMenuItem saveToolStripMenuItem;
         private ToolStripMenuItem fileTreeViewToolStripMenuItem;
-        private ToolStripMenuItem finishedToolStripMenuItem;
+        private ToolStripMenuItem finishToolStripMenuItem;
         private MenuStrip menuStrip1;
     }
 }
