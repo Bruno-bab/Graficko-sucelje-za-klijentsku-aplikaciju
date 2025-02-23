@@ -5,7 +5,6 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
 {
     public partial class Form1 : Form
     {
-        private RichTextBox richTextBox1;
         private OpenFileDialog openFileDialog;
         private SaveFileDialog saveFileDialog;
 
@@ -16,8 +15,6 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
         public Form1()
         {
             InitializeComponent();
-
-            richTextBox1 = new RichTextBox();
 
             toolStripRadioButtonMenuItem1.Text = "Not Finished";
             toolStripRadioButtonMenuItem2.Text = "Finished";

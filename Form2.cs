@@ -16,25 +16,25 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
         public Form2()
         {
             InitializeComponent();
-            ListDirectory(treeView1, Directory.GetCurrentDirectory());
+            DirectoryList(treeView1, Directory.GetCurrentDirectory());
             this.Text = "File TreeView";
         }
 
-        private void ListDirectory(TreeView treeView, string path)
+        private void DirectoryList(TreeView treeView, string path)
         {
             treeView.Nodes.Clear();
             var rootDirInfo = new DirectoryInfo(path);
             treeView.Nodes.Add(CreateDirectoryNode(rootDirInfo));
         }
 
-        private static TreeNode CreateDirectoryNode(DirectoryInfo dirInfo)
+        private static TreeNode CreateDirectoryNode(DirectoryInfo directoryInfo)
         {
-            var directoryNode = new TreeNode(dirInfo.FullName);
-            foreach (var directory in dirInfo.GetDirectories())
+            var directoryNode = new TreeNode(directoryInfo.FullName);
+            foreach (var directory in directoryInfo.GetDirectories())
             {
                 directoryNode.Nodes.Add(CreateDirectoryNode(directory));
             }
-            foreach (var file in dirInfo.GetFiles())
+            foreach (var file in directoryInfo.GetFiles())
             {
                 directoryNode.Nodes.Add(new TreeNode(file.Name));
             }
