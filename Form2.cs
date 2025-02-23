@@ -16,11 +16,11 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
         public Form2()
         {
             InitializeComponent();
-            DirectoryList(treeView1, Directory.GetCurrentDirectory());
+            ListDirectory(treeView1, Directory.GetCurrentDirectory());
             this.Text = "File TreeView";
         }
 
-        private void DirectoryList(TreeView treeView, string path)
+        private void ListDirectory(TreeView treeView, string path)
         {
             treeView.Nodes.Clear();
             var rootDirInfo = new DirectoryInfo(path);
@@ -29,16 +29,16 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
 
         private static TreeNode CreateDirectoryNode(DirectoryInfo dirInfo)
         {
-            var dirNode = new TreeNode(dirInfo.FullName);
+            var directoryNode = new TreeNode(dirInfo.FullName);
             foreach (var directory in dirInfo.GetDirectories())
             {
-                dirNode.Nodes.Add(CreateDirectoryNode(directory));
+                directoryNode.Nodes.Add(CreateDirectoryNode(directory));
             }
             foreach (var file in dirInfo.GetFiles())
             {
-                dirNode.Nodes.Add(new TreeNode(file.Name));
+                directoryNode.Nodes.Add(new TreeNode(file.Name));
             }
-            return dirNode;
+            return directoryNode;
         }
     }
 }
