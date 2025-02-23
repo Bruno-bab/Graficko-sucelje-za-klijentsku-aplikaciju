@@ -29,12 +29,6 @@ namespace Grafičko_sučelje_za_klijentsku_aplikaciju
             set { richTextBox1.Text = value; }
         }
 
-        public OpenFileDialog OpenFileDialogInstance
-        {
-            get { return openFileDialog; }
-            set { openFileDialog = value; }
-        }
-
         public void NewFile()
         {
             try
